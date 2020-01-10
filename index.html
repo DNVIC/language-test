@@ -5,8 +5,8 @@
 
 <script>
 function dinci() {
-  alert(document.getElementById("x").value)
-
+  var language = document.getElementById("x").value
+  localStorage.setItem('Language', language);
 }
 
 </script>
@@ -16,5 +16,9 @@ function dinci() {
 
 </select>
 <button onclick=dinci()> test </button>
+<p id=y> Hello SioN this is in English </p>
 
-
+<script>
+if(localStorage.getItem('Language') = 'es') {
+  document.getElementById("y").innerHTML = "Hola SioN está es en Español";
+}
