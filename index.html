@@ -4,8 +4,9 @@
 <body>
 
 <script>
-document.getElementById(localstorage.getItem("Language")).selected;
-  
+var selectedLanguage = localstorage.getItem("Language");
+document.getElementById("languageSelector").value = selectedLanguage;
+
   
 function setStorage() {
   var language = document.getElementById("languageSelector").value
