@@ -4,24 +4,27 @@
 <body>
 
 <script>
-function dinci() {
-  var language = document.getElementById("x").value
+document.getElementById(localstorage.getItem("Language")).selected;
+  
+  
+function setStorage() {
+  var language = document.getElementById("languageSelector").value
   localStorage.setItem('Language', language);
   location.reload();
 }
 
 </script>
-<select id=x>
-<option value="en"> English </option>
-<option value="es"> Español </option>
+<select id=languageSelector>
+<option value="en" id=en> English </option>
+<option value="es"  id=en> Español </option>
 
 </select>
-<button onclick=dinci()> test </button>
-<p id=y> Hello SioN this is in English </p>
+<button onclick=setStorage()> test </button>
+<p id=text1> Hello SioN this is in English </p>
 
 <script>
 if(localStorage.getItem('Language') == 'es') {
-  document.getElementById("y").innerHTML = "Hola SioN está es en Español";
+  document.getElementById("text1").innerHTML = "Hola SioN está es en Español";
 }
 </script>
   </body>
