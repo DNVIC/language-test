@@ -24,11 +24,16 @@ function setStorage() {
 <p id=text1> Hello SioN this is in English </p>
 
 <script>
-if(localStorage.getItem('Language') == 'es') {
+if(localStorage.getItem('Language') === 'es') {
   document.getElementById("text1").innerHTML = "Hola SioN está es en Español";
 }
+if(localStorage.getItem("Language") === "null") {
+  localStorage.setItem("Language", "en");
+}
+
 var selectedLanguage = localStorage.getItem("Language");
 document.getElementById("languageSelector").value = selectedLanguage;
+
 </script>
   </body>
 </html>
