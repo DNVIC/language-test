@@ -4,8 +4,7 @@
 <body>
 
 <script>
-var selectedLanguage = localstorage.getItem("Language");
-document.getElementById("languageSelector").value = selectedLanguage;
+
 
   
 function setStorage() {
@@ -27,6 +26,8 @@ function setStorage() {
 if(localStorage.getItem('Language') == 'es') {
   document.getElementById("text1").innerHTML = "Hola SioN está es en Español";
 }
+var selectedLanguage = localstorage.getItem("Language");
+document.getElementById("languageSelector").value = selectedLanguage;
 </script>
   </body>
 </html>
