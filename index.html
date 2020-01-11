@@ -21,11 +21,11 @@ function setStorage() {
 
 </select>
 <button onclick=setStorage()> test </button>
-<p id=text1> Hello SioN this is in English </p>
+<p class=text1> Hello SioN this is in English </p>
 
 <script>
 if(localStorage.getItem('Language') === 'es') {
-  document.getElementById("text1").innerHTML = "Hola SioN está es en Español";
+  document.getElementsByClassName("text1")[0].innerHTML = "Hola SioN está es en Español";
 }
 if(localStorage.getItem("Language") === "null") {
   localStorage.setItem("Language", "en");
