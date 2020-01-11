@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta charset="UTF-8">
 </head>
 <body>
 
@@ -16,7 +17,7 @@ function setStorage() {
 </script>
 <select id=languageSelector>
 <option value="en" id=en> English </option>
-<option value="es"  id=en> Español </option>
+<option value="es"  id=es> Español </option>
 
 </select>
 <button onclick=setStorage()> test </button>
@@ -26,7 +27,7 @@ function setStorage() {
 if(localStorage.getItem('Language') == 'es') {
   document.getElementById("text1").innerHTML = "Hola SioN está es en Español";
 }
-var selectedLanguage = localstorage.getItem("Language");
+var selectedLanguage = localStorage.getItem("Language");
 document.getElementById("languageSelector").value = selectedLanguage;
 </script>
   </body>
